@@ -13,6 +13,7 @@ protocol HomeViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: HomePresenterProtocol? { get set }
     func setup()
+    func presenterPushDataToView(receivedData: [AmiiboForViewEntity])
 }
 
 protocol HomeWireFrameProtocol: class {

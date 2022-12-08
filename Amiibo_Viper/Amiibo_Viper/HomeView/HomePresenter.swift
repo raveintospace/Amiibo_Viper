@@ -20,6 +20,7 @@ class HomePresenter  {
 extension HomePresenter: HomePresenterProtocol {
     
     func viewDidLoad() {
+        interactor?.interactorGetData()
         view?.setup()
     }
 }
@@ -27,6 +28,6 @@ extension HomePresenter: HomePresenterProtocol {
 extension HomePresenter: HomeInteractorOutputProtocol {
     // Receive data from Interactor and send it to view
     func interactorPushDataToPresenter(receivedData: [AmiiboForViewEntity]) {
-        <#code#>
+        view?.presenterPushDataToView(receivedData: receivedData)
     }
 }

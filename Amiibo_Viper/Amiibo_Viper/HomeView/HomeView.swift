@@ -15,6 +15,7 @@ class HomeView: UIViewController {
     var presenter: HomePresenterProtocol?
     var tableView = UITableView()
     var safeArea: UILayoutGuide!
+    var arrayViewAmiibo = [AmiiboForViewEntity]()   // stores data received from presenter
 
     // MARK: - Lifecycle
 
@@ -30,11 +31,11 @@ class HomeView: UIViewController {
 // MARK: - Extensions
 
 extension HomeView: HomeViewProtocol {
-    // TODO: implement view output methods
+
     func setup() {
         safeArea = view.layoutMarginsGuide
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.register(AmiiboCell.self, forCellReuseIdentifier: "cellId")
         setupTableView()
     }
     
@@ -47,18 +48,32 @@ extension HomeView: HomeViewProtocol {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
+    
+    func presenterPushDataToView(receivedData: [AmiiboForViewEntity]) {
+        arrayViewAmiibo = receivedData
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension HomeView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return arrayViewAmiibo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Fato"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let amiibo = arrayViewAmiibo[indexPath.row]
+        
+        guard let amiiboCell = cell as? AmiiboCell else { return cell }
+        amiiboCell.nameLabel.text = amiibo.name
+        amiiboCell.gameSeriesLabel.text = amiibo.gameSeries
+        amiiboCell.countLabel.text = String(amiibo.count)
+        
+        if let url = URL(string: amiibo.imageUrl) {
+            amiiboCell.imageIV.loadImage(from: url)
+        }
         return cell
     }
-    
-    
 }

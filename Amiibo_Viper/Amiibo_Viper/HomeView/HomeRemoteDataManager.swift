@@ -38,6 +38,7 @@ class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
                     let decoder = JSONDecoder()
                     
                     self.getAmiibo = try decoder.decode([AmiiboEntity].self, from: data)
+                    print("fato superat")
                     
                     // send data to interactor
                     self.remoteRequestHandler?.remoteDataManagerCallBackData(with: self.getAmiibo)

@@ -15,9 +15,9 @@ class HomeInteractor: HomeInteractorInputProtocol {
     var localDatamanager: HomeLocalDataManagerInputProtocol?
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol?
     
-    var arrayAmiibo = [AmiiboForViewEntity]()   // converted Amiibos
+    var arrayAmiibo = [AmiiboForViewEntity]()   // to store converted Amiibos
     
-    func interactorGetData() {
+    func interactorGetData() {                  // ask remoteDataManager to get data from our api call
         remoteDatamanager?.remoteGetData()
     }
 }
@@ -26,7 +26,7 @@ extension HomeInteractor: HomeRemoteDataManagerOutputProtocol {
     
     // interactor has raw data from remoteDataManager
     func remoteDataManagerCallBackData(with category: [AmiiboEntity]) {
-        // interactor sends converted data to the presenter, from AmiiboEntity to AmiiboForViewEntity
+        // interactor converts data, from AmiiboEntity to AmiiboForViewEntity
         for amiibo in category {
             let amiiboForViewEntity = AmiiboForViewEntity(name: amiibo.amiibo[0].name, gameSeries: amiibo.amiibo[0].gameSeries, imageUrl: amiibo.amiibo[0].image, count: 0)
             self.arrayAmiibo.append(amiiboForViewEntity)
