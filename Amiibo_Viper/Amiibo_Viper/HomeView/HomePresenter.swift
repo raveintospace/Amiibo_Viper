@@ -20,7 +20,7 @@ class HomePresenter  {
 extension HomePresenter: HomePresenterProtocol {
     
     func viewDidLoad() {
-        
+        view?.setup()
     }
 }
 

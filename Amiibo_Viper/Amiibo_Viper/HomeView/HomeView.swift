@@ -24,9 +24,13 @@ class HomeView: UIViewController {
         // communicate the view with the presenter
         presenter?.viewDidLoad()
         view.backgroundColor = .orange
-        setup()
     }
-    
+}
+
+// MARK: - Extensions
+
+extension HomeView: HomeViewProtocol {
+    // TODO: implement view output methods
     func setup() {
         safeArea = view.layoutMarginsGuide
         tableView.dataSource = self
@@ -43,13 +47,6 @@ class HomeView: UIViewController {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-    
-}
-
-// MARK: - Extensions
-
-extension HomeView: HomeViewProtocol {
-    // TODO: implement view output methods
 }
 
 extension HomeView: UITableViewDataSource {

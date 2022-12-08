@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC012941FE0800490596 /* AmiiboEntity.swift */; };
+		343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC032941FE7E00490596 /* AmiiboForViewEntity.swift */; };
 		34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805425293FAF3D007CD70C /* AppDelegate.swift */; };
 		34805428293FAF3D007CD70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805427293FAF3D007CD70C /* SceneDelegate.swift */; };
 		3480542A293FAF3D007CD70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805429293FAF3D007CD70C /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		343FBC012941FE0800490596 /* AmiiboEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboEntity.swift; sourceTree = "<group>"; };
+		343FBC032941FE7E00490596 /* AmiiboForViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboForViewEntity.swift; sourceTree = "<group>"; };
 		34805422293FAF3D007CD70C /* Amiibo_Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiibo_Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34805425293FAF3D007CD70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34805427293FAF3D007CD70C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				3480543E293FB026007CD70C /* HomeView.swift */,
 				3480543D293FB026007CD70C /* HomeInteractor.swift */,
 				3480543A293FB026007CD70C /* HomePresenter.swift */,
+				343FBC012941FE0800490596 /* AmiiboEntity.swift */,
+				343FBC032941FE7E00490596 /* AmiiboForViewEntity.swift */,
 				3480543B293FB026007CD70C /* HomeLocalDataManager.swift */,
 				3480543C293FB026007CD70C /* HomeProtocols.swift */,
 				3480543F293FB026007CD70C /* HomeRemoteDataManager.swift */,
@@ -163,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */,
 				3480542A293FAF3D007CD70C /* ViewController.swift in Sources */,
 				34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */,
 				34805442293FB026007CD70C /* HomeLocalDataManager.swift in Sources */,
@@ -170,6 +177,7 @@
 				34805443293FB026007CD70C /* HomeProtocols.swift in Sources */,
 				34805445293FB026007CD70C /* HomeView.swift in Sources */,
 				34805446293FB026007CD70C /* HomeRemoteDataManager.swift in Sources */,
+				343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */,
 				34805441293FB026007CD70C /* HomePresenter.swift in Sources */,
 				34805444293FB026007CD70C /* HomeInteractor.swift in Sources */,
 				34805447293FB026007CD70C /* HomeWireFrame.swift in Sources */,
