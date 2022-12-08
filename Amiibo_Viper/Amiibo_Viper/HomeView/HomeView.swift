@@ -11,10 +11,12 @@ import UIKit
 
 class HomeView: UIViewController {
 
-    // MARK: Properties
+    // MARK: - Properties
     var presenter: HomePresenterProtocol?
+    var tableView = UITableView()
+    var safeArea: UILayoutGuide!
 
-    // MARK: Lifecycle
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +24,44 @@ class HomeView: UIViewController {
         // communicate the view with the presenter
         presenter?.viewDidLoad()
         view.backgroundColor = .orange
+        setup()
     }
+    
+    func setup() {
+        safeArea = view.layoutMarginsGuide
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        setupTableView()
+    }
+    
+    func setupTableView() {
+        view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
 }
+
+// MARK: - Extensions
 
 extension HomeView: HomeViewProtocol {
     // TODO: implement view output methods
+}
+
+extension HomeView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Fato"
+        return cell
+    }
+    
+    
 }
