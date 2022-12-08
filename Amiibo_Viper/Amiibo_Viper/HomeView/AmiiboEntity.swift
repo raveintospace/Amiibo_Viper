@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AmiiboList: Codable {
+struct AmiiboEntity: Codable {
     let amiibo: [Amiibo]
 }
 

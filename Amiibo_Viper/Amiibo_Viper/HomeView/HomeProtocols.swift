@@ -30,7 +30,8 @@ protocol HomePresenterProtocol: class {
 }
 
 protocol HomeInteractorOutputProtocol: class {
-// INTERACTOR -> PRESENTER
+    // INTERACTOR -> PRESENTER
+    func interactorPushDataToPresenter(receivedData: [AmiiboForViewEntity])
 }
 
 protocol HomeInteractorInputProtocol: class {
@@ -38,6 +39,8 @@ protocol HomeInteractorInputProtocol: class {
     var presenter: HomeInteractorOutputProtocol? { get set }
     var localDatamanager: HomeLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol? { get set }
+    
+    func interactorGetData()
 }
 
 protocol HomeDataManagerInputProtocol: class {
@@ -47,10 +50,12 @@ protocol HomeDataManagerInputProtocol: class {
 protocol HomeRemoteDataManagerInputProtocol: class {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol? { get set }
+    func remoteGetData()
 }
 
 protocol HomeRemoteDataManagerOutputProtocol: class {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func remoteDataManagerCallBackData(with category: [AmiiboEntity])
 }
 
 protocol HomeLocalDataManagerInputProtocol: class {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AmiiboForView {
+struct AmiiboForViewEntity {
     let name: String
     let gameSeries: String
     let imageUrl: String

@@ -25,5 +25,8 @@ extension HomePresenter: HomePresenterProtocol {
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    // Receive data from Interactor and send it to view
+    func interactorPushDataToPresenter(receivedData: [AmiiboForViewEntity]) {
+        <#code#>
+    }
 }

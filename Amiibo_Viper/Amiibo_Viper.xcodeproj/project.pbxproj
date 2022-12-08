@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC012941FE0800490596 /* AmiiboEntity.swift */; };
 		343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC032941FE7E00490596 /* AmiiboForViewEntity.swift */; };
+		343FBC07294203BE00490596 /* AmiiboCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC06294203BE00490596 /* AmiiboCell.swift */; };
+		343FBC09294203F600490596 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC08294203F600490596 /* CustomImageView.swift */; };
 		34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805425293FAF3D007CD70C /* AppDelegate.swift */; };
 		34805428293FAF3D007CD70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805427293FAF3D007CD70C /* SceneDelegate.swift */; };
 		3480542A293FAF3D007CD70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805429293FAF3D007CD70C /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		343FBC012941FE0800490596 /* AmiiboEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboEntity.swift; sourceTree = "<group>"; };
 		343FBC032941FE7E00490596 /* AmiiboForViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboForViewEntity.swift; sourceTree = "<group>"; };
+		343FBC06294203BE00490596 /* AmiiboCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboCell.swift; sourceTree = "<group>"; };
+		343FBC08294203F600490596 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		34805422293FAF3D007CD70C /* Amiibo_Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiibo_Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34805425293FAF3D007CD70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34805427293FAF3D007CD70C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		343FBC05294203A400490596 /* CellResources */ = {
+			isa = PBXGroup;
+			children = (
+				343FBC06294203BE00490596 /* AmiiboCell.swift */,
+				343FBC08294203F600490596 /* CustomImageView.swift */,
+			);
+			path = CellResources;
+			sourceTree = "<group>";
+		};
 		34805419293FAF3D007CD70C = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +108,7 @@
 				3480543C293FB026007CD70C /* HomeProtocols.swift */,
 				3480543F293FB026007CD70C /* HomeRemoteDataManager.swift */,
 				34805440293FB026007CD70C /* HomeWireFrame.swift */,
+				343FBC05294203A400490596 /* CellResources */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -172,11 +186,13 @@
 				343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */,
 				3480542A293FAF3D007CD70C /* ViewController.swift in Sources */,
 				34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */,
+				343FBC09294203F600490596 /* CustomImageView.swift in Sources */,
 				34805442293FB026007CD70C /* HomeLocalDataManager.swift in Sources */,
 				34805428293FAF3D007CD70C /* SceneDelegate.swift in Sources */,
 				34805443293FB026007CD70C /* HomeProtocols.swift in Sources */,
 				34805445293FB026007CD70C /* HomeView.swift in Sources */,
 				34805446293FB026007CD70C /* HomeRemoteDataManager.swift in Sources */,
+				343FBC07294203BE00490596 /* AmiiboCell.swift in Sources */,
 				343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */,
 				34805441293FB026007CD70C /* HomePresenter.swift in Sources */,
 				34805444293FB026007CD70C /* HomeInteractor.swift in Sources */,
