@@ -23,6 +23,13 @@
 		34805445293FB026007CD70C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480543E293FB026007CD70C /* HomeView.swift */; };
 		34805446293FB026007CD70C /* HomeRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480543F293FB026007CD70C /* HomeRemoteDataManager.swift */; };
 		34805447293FB026007CD70C /* HomeWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805440293FB026007CD70C /* HomeWireFrame.swift */; };
+		34AD01D529479B67006FF96B /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01CE29479B67006FF96B /* DetailPresenter.swift */; };
+		34AD01D629479B67006FF96B /* DetailLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01CF29479B67006FF96B /* DetailLocalDataManager.swift */; };
+		34AD01D729479B67006FF96B /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D029479B67006FF96B /* DetailProtocols.swift */; };
+		34AD01D829479B67006FF96B /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D129479B67006FF96B /* DetailInteractor.swift */; };
+		34AD01D929479B67006FF96B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D229479B67006FF96B /* DetailView.swift */; };
+		34AD01DA29479B67006FF96B /* DetailRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D329479B67006FF96B /* DetailRemoteDataManager.swift */; };
+		34AD01DB29479B67006FF96B /* DetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D429479B67006FF96B /* DetailWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		3480543E293FB026007CD70C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3480543F293FB026007CD70C /* HomeRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRemoteDataManager.swift; sourceTree = "<group>"; };
 		34805440293FB026007CD70C /* HomeWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireFrame.swift; sourceTree = "<group>"; };
+		34AD01CE29479B67006FF96B /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		34AD01CF29479B67006FF96B /* DetailLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocalDataManager.swift; sourceTree = "<group>"; };
+		34AD01D029479B67006FF96B /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		34AD01D129479B67006FF96B /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		34AD01D229479B67006FF96B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		34AD01D329479B67006FF96B /* DetailRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRemoteDataManager.swift; sourceTree = "<group>"; };
+		34AD01D429479B67006FF96B /* DetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 				34805425293FAF3D007CD70C /* AppDelegate.swift */,
 				34805427293FAF3D007CD70C /* SceneDelegate.swift */,
 				34805429293FAF3D007CD70C /* ViewController.swift */,
+				34AD01DC29479B70006FF96B /* DetailView */,
 				34805439293FAFF8007CD70C /* HomeView */,
 				3480542E293FAF3F007CD70C /* Assets.xcassets */,
 				34805430293FAF3F007CD70C /* LaunchScreen.storyboard */,
@@ -111,6 +126,20 @@
 				343FBC05294203A400490596 /* CellResources */,
 			);
 			path = HomeView;
+			sourceTree = "<group>";
+		};
+		34AD01DC29479B70006FF96B /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				34AD01D229479B67006FF96B /* DetailView.swift */,
+				34AD01D129479B67006FF96B /* DetailInteractor.swift */,
+				34AD01CE29479B67006FF96B /* DetailPresenter.swift */,
+				34AD01CF29479B67006FF96B /* DetailLocalDataManager.swift */,
+				34AD01D029479B67006FF96B /* DetailProtocols.swift */,
+				34AD01D329479B67006FF96B /* DetailRemoteDataManager.swift */,
+				34AD01D429479B67006FF96B /* DetailWireFrame.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,15 +215,22 @@
 				343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */,
 				3480542A293FAF3D007CD70C /* ViewController.swift in Sources */,
 				34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */,
+				34AD01D829479B67006FF96B /* DetailInteractor.swift in Sources */,
 				343FBC09294203F600490596 /* CustomImageView.swift in Sources */,
 				34805442293FB026007CD70C /* HomeLocalDataManager.swift in Sources */,
 				34805428293FAF3D007CD70C /* SceneDelegate.swift in Sources */,
 				34805443293FB026007CD70C /* HomeProtocols.swift in Sources */,
+				34AD01DA29479B67006FF96B /* DetailRemoteDataManager.swift in Sources */,
+				34AD01DB29479B67006FF96B /* DetailWireFrame.swift in Sources */,
 				34805445293FB026007CD70C /* HomeView.swift in Sources */,
+				34AD01D729479B67006FF96B /* DetailProtocols.swift in Sources */,
+				34AD01D529479B67006FF96B /* DetailPresenter.swift in Sources */,
 				34805446293FB026007CD70C /* HomeRemoteDataManager.swift in Sources */,
+				34AD01D629479B67006FF96B /* DetailLocalDataManager.swift in Sources */,
 				343FBC07294203BE00490596 /* AmiiboCell.swift in Sources */,
 				343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */,
 				34805441293FB026007CD70C /* HomePresenter.swift in Sources */,
+				34AD01D929479B67006FF96B /* DetailView.swift in Sources */,
 				34805444293FB026007CD70C /* HomeInteractor.swift in Sources */,
 				34805447293FB026007CD70C /* HomeWireFrame.swift in Sources */,
 			);

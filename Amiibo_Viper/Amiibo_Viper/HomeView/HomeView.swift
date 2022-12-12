@@ -35,6 +35,7 @@ extension HomeView: HomeViewProtocol {
     func setup() {
         safeArea = view.layoutMarginsGuide
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(AmiiboCell.self, forCellReuseIdentifier: "cellId")
         setupTableView()
     }
@@ -106,6 +107,13 @@ extension HomeView: UITableViewDelegate {
         }
         
         return UISwipeActionsConfiguration(actions: [countAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedAmiibo = self.arrayViewAmiibo[indexPath.row]
+        let detailView = DetailView()
+        detailView.amiiboInDetailView = selectedAmiibo
+        self.present(detailView, animated: true)
     }
         
         
