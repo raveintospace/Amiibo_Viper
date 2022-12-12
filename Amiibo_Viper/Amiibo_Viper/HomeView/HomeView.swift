@@ -77,3 +77,36 @@ extension HomeView: UITableViewDataSource {
         return cell
     }
 }
+
+extension HomeView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
+            
+            self.arrayViewAmiibo.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            completionHandler(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let countAction = UIContextualAction(style: .normal, title: "Count up") { (action, view, completionHandler) in
+            
+            let currentCount = self.arrayViewAmiibo[indexPath.row].count
+            self.arrayViewAmiibo[indexPath.row].count = currentCount + 1
+            
+            if let cell = self.tableView.cellForRow(at: indexPath) as? AmiiboCell {
+                cell.countLabel.text = String(self.arrayViewAmiibo[indexPath.row].count)
+            }
+            completionHandler(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [countAction])
+    }
+        
+        
+}
