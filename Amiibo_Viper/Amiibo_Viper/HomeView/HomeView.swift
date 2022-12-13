@@ -115,6 +115,4 @@ extension HomeView: UITableViewDelegate {
         detailView.amiiboInDetailView = selectedAmiibo
         self.present(detailView, animated: true)
     }
-        
-        
 }
