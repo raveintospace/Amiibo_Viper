@@ -18,7 +18,11 @@ class DetailPresenter: DetailPresenterProtocol  {
     
     func viewDidLoad() {
         print("I'm the detail VC and I have: \(String(describing: dataAmiiboReceived?.name))")
-        view?.setup()
+        
+        if let dataAmiiboReceived = dataAmiiboReceived {
+            view?.setupDetailView()
+            view?.showDataInDetailVC(data: dataAmiiboReceived)
+        }
     }
 }
 

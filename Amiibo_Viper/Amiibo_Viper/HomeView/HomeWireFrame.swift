@@ -40,5 +40,5 @@ class HomeWireFrame: HomeWireFrameProtocol {
     }
 }
 // https://www.youtube.com/watch?v=ruVZVFRbeas DetailView Viper Sergio
-// https://betterprogramming.pub/how-to-implement-viper-architecture-in-your-ios-app-rest-api-and-kingfisher-f494a0891c43 - check QuoteDetail Module
+// https://betterprogramming.pub/how-to-implement-viper-architecture-in-your-ios-app-rest-api-and-kingfisher-f494a0891c43 - how to set up a navigationController without storyboards
 

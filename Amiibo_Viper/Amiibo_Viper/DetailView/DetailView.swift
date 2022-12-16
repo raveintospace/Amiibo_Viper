@@ -13,7 +13,7 @@ class DetailView: UIViewController {
 
     // MARK: - Properties
     var presenter: DetailPresenterProtocol?
-    var amiiboInDetailView: AmiiboForViewEntity?
+    // var amiiboInDetailView: AmiiboForViewEntity?
     
     var safeArea: UILayoutGuide!
     let imageIV = CustomImageView()
@@ -31,7 +31,7 @@ class DetailView: UIViewController {
 
 extension DetailView: DetailViewProtocol {
     
-    func setup() {
+    func setupDetailView() {
         safeArea = view.layoutMarginsGuide
         setupImage()
         setupNameLabel()
@@ -79,6 +79,15 @@ extension DetailView: DetailViewProtocol {
     }
     
     func showDataInDetailVC(data: AmiiboForViewEntity) {
+        if let url = URL(string: data.imageUrl)
+        {
+            imageIV.loadImage(from: url)
+        }
+        nameLabel.text = data.name
         
+//        if let url = URL(string: data.imageUrl) {
+//            imageIV.loadImage(from: url)
+//        }
+//        nameLabel.text = data.name
     }
 }

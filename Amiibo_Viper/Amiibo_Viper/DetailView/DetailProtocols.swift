@@ -12,7 +12,8 @@ import UIKit
 protocol DetailViewProtocol: class {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
-    func setup()
+    func setupDetailView()
+    func showDataInDetailVC(data: AmiiboForViewEntity)
 }
 
 protocol DetailWireFrameProtocol: class {
