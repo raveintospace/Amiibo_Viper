@@ -23,7 +23,7 @@ class DetailWireFrame: DetailWireFrameProtocol {
         presenter.view = view
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
-        presenter.dataAmiiboReceived = data
+        presenter.dataAmiiboReceived = data // the data imported when creating the detailModule
         interactor.presenter = presenter
         interactor.localDatamanager = localDataManager
         interactor.remoteDatamanager = remoteDataManager

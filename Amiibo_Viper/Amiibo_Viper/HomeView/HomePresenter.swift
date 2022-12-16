@@ -23,6 +23,10 @@ extension HomePresenter: HomePresenterProtocol {
         interactor?.interactorGetData()
         view?.setup()
     }
+    
+    func showDetailView(with data: AmiiboForViewEntity) {
+        wireFrame?.presentNewViewDetail(from: view!, withData: data)
+    }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {

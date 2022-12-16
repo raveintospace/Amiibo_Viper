@@ -20,7 +20,6 @@ class DetailPresenter: DetailPresenterProtocol  {
         print("I'm the detail VC and I have: \(String(describing: dataAmiiboReceived?.name))")
         view?.setup()
     }
-    
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {

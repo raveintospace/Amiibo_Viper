@@ -110,9 +110,16 @@ extension HomeView: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedAmiibo = self.arrayViewAmiibo[indexPath.row]
-        let detailView = DetailView()
-        detailView.amiiboInDetailView = selectedAmiibo
-        self.present(detailView, animated: true)
+        let amiibo = arrayViewAmiibo[indexPath.row]
+        presenter?.showDetailView(with: AmiiboForViewEntity(name: amiibo.name, gameSeries: amiibo.gameSeries, imageUrl: amiibo.imageUrl, count: amiibo.count))
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedAmiibo = self.arrayViewAmiibo[indexPath.row]
+//        let detailView = DetailView()
+//        detailView.amiiboInDetailView = selectedAmiibo
+//        self.present(detailView, animated: true) -->
+//    }
 }
+
+// thursday - check how to present a view using viper (self.present(newDetailView, animated: true))

@@ -18,7 +18,9 @@ protocol HomeViewProtocol: class {
 
 protocol HomeWireFrameProtocol: class {
     // PRESENTER -> WIREFRAME
-    static func createHomeModule() -> UIViewController
+    static func createHomeModule() -> UINavigationController
+    
+    func presentNewViewDetail(from view: HomeViewProtocol, withData: AmiiboForViewEntity)
 }
 
 protocol HomePresenterProtocol: class {
@@ -28,6 +30,7 @@ protocol HomePresenterProtocol: class {
     var wireFrame: HomeWireFrameProtocol? { get set }
     
     func viewDidLoad()
+    func showDetailView(with data: AmiiboForViewEntity)
 }
 
 protocol HomeInteractorOutputProtocol: class {

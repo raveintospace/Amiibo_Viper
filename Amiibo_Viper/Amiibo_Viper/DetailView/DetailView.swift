@@ -27,8 +27,6 @@ class DetailView: UIViewController {
         presenter?.viewDidLoad()
         view.backgroundColor = .black
     }
-    
-    
 }
 
 extension DetailView: DetailViewProtocol {
@@ -84,5 +82,3 @@ extension DetailView: DetailViewProtocol {
         
     }
 }
-
-// tuesday -> import data from homeView to detailView
