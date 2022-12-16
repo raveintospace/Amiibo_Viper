@@ -12,7 +12,7 @@ class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol?
     
-    var getAmiibo = [Amiibo]()  // to store the data we got after calling our remote server
+    var receivedAmiibos = [Amiibo]()  // to store the data we got after calling our remote server
     
     func remoteGetData() {      // call to our remote server to get data for our interactor
         
@@ -37,11 +37,11 @@ class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
                 do {
                     let decoder = JSONDecoder()
                     
-                    self.getAmiibo = try decoder.decode(AmiiboEntity.self, from: data).amiibo
+                    self.receivedAmiibos = try decoder.decode(AmiiboEntity.self, from: data).amiibo
                     print("fato superat")
                     
                     // send data to interactor
-                    self.remoteRequestHandler?.remoteDataManagerCallBackData(with: self.getAmiibo)
+                    self.remoteRequestHandler?.remoteDataManagerCallBackData(with: self.receivedAmiibos)
                     
                 } catch {
                     print("Parsing error, error: \(error)")

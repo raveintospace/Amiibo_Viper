@@ -13,12 +13,12 @@ class DetailView: UIViewController {
 
     // MARK: - Properties
     var presenter: DetailPresenterProtocol?
-    // var amiiboInDetailView: AmiiboForViewEntity?
     
     var safeArea: UILayoutGuide!
+    var imageIVTopAnchorConstant: NSLayoutConstraint!
     let imageIV = CustomImageView()
     let nameLabel = UILabel()
-    let dismissButton = UIButton()
+    let changeSizeButton = UIButton()
 
     // MARK: - Lifecycle
 
@@ -35,7 +35,7 @@ extension DetailView: DetailViewProtocol {
         safeArea = view.layoutMarginsGuide
         setupImage()
         setupNameLabel()
-        setupDismissButton()
+        setupchangeSizeButton()
     }
     
     func setupImage() {
@@ -61,21 +61,23 @@ extension DetailView: DetailViewProtocol {
         nameLabel.font = UIFont(name: "Verdana-Bold", size: 18)
     }
     
-    func setupDismissButton() {
-        view.addSubview(dismissButton)
+    func setupchangeSizeButton() {
+        view.addSubview(changeSizeButton)
         
-        dismissButton.translatesAutoresizingMaskIntoConstraints = false
-        dismissButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -50).isActive = true
-        dismissButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
+        changeSizeButton.translatesAutoresizingMaskIntoConstraints = false
+        changeSizeButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -50).isActive = true
+        changeSizeButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         
-        dismissButton.setTitle("Dissmiss", for: .normal)
-        dismissButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 16)
+        changeSizeButton.setTitle("Change Amiibo size", for: .normal)
+        changeSizeButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 16)
         
-        dismissButton.addTarget(self, action: #selector(dismissAction), for: .touchUpInside)
+        changeSizeButton.addTarget(self, action: #selector(changeSizeAction), for: .touchUpInside)
     }
     
-    @objc func dismissAction() {
-        self.dismiss(animated: true)
+    @objc func changeSizeAction() {
+//        imageIV.transform = CGAffineTransform(scaleX: 2, y: 2)
+//        imageIV.transform = CGAffineTransform(translationX: 0, y: 50)
+        // https://blog.devgenius.io/how-to-animate-your-images-in-swift-ios-swift-guide-64de30ea616b
     }
     
     func showDataInDetailVC(data: AmiiboForViewEntity) {
@@ -84,10 +86,5 @@ extension DetailView: DetailViewProtocol {
             imageIV.loadImage(from: url)
         }
         nameLabel.text = data.name
-        
-//        if let url = URL(string: data.imageUrl) {
-//            imageIV.loadImage(from: url)
-//        }
-//        nameLabel.text = data.name
     }
 }

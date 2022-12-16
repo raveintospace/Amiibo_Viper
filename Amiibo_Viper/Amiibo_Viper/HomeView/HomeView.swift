@@ -22,7 +22,7 @@ class HomeView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // communicate the view with the presenter
+        // ask presenter to load the view
         presenter?.viewDidLoad()
         view.backgroundColor = .orange
     }

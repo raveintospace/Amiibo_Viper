@@ -24,7 +24,7 @@ class HomeInteractor: HomeInteractorInputProtocol {
 
 extension HomeInteractor: HomeRemoteDataManagerOutputProtocol {
     
-    // interactor has raw data from remoteDataManager
+    // interactor receives raw data from remoteDataManager
     func remoteDataManagerCallBackData(with category: [Amiibo]) {
         // interactor converts data, from AmiiboEntity to AmiiboForViewEntity
         for amiibo in category {
