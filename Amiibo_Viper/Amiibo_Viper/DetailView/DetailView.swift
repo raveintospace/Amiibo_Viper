@@ -18,7 +18,9 @@ class DetailView: UIViewController {
     var imageIVTopAnchorConstant: NSLayoutConstraint!
     let imageIV = CustomImageView()
     let nameLabel = UILabel()
-    let changeSizeButton = UIButton()
+    let zoomButton = UIButton()
+    
+    var zoomActivated = false
 
     // MARK: - Lifecycle
 
@@ -43,7 +45,7 @@ extension DetailView: DetailViewProtocol {
         
         imageIV.translatesAutoresizingMaskIntoConstraints = false
         imageIV.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        imageIV.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 50).isActive = true
+        imageIV.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         imageIV.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.5).isActive = true  // half the size of the device screen
         imageIV.heightAnchor.constraint(equalTo: imageIV.widthAnchor).isActive = true   // same height as width
         
@@ -62,22 +64,31 @@ extension DetailView: DetailViewProtocol {
     }
     
     func setupchangeSizeButton() {
-        view.addSubview(changeSizeButton)
+        view.addSubview(zoomButton)
         
-        changeSizeButton.translatesAutoresizingMaskIntoConstraints = false
-        changeSizeButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -50).isActive = true
-        changeSizeButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
+        zoomButton.translatesAutoresizingMaskIntoConstraints = false
+        zoomButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -50).isActive = true
+        zoomButton.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         
-        changeSizeButton.setTitle("Change Amiibo size", for: .normal)
-        changeSizeButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 16)
+        zoomButton.setTitle("Zoom in Amiibo", for: .normal)
+        zoomButton.titleLabel?.font = UIFont(name: "Verdana-Bold", size: 16)
+        zoomButton.setTitleColor(.systemBlue, for: .normal)
         
-        changeSizeButton.addTarget(self, action: #selector(changeSizeAction), for: .touchUpInside)
+        zoomButton.addTarget(self, action: #selector(zoomAction), for: .touchUpInside)
     }
     
-    @objc func changeSizeAction() {
-//        imageIV.transform = CGAffineTransform(scaleX: 2, y: 2)
-//        imageIV.transform = CGAffineTransform(translationX: 0, y: 50)
-        // https://blog.devgenius.io/how-to-animate-your-images-in-swift-ios-swift-guide-64de30ea616b
+    @objc func zoomAction() {
+        if !self.zoomActivated {
+            self.imageIV.transform = CGAffineTransform(scaleX: 2.2, y: 2.2)
+            nameLabel.removeFromSuperview()
+            self.zoomButton.setTitle("Zoom out Amiibo", for: .normal)
+            zoomActivated = true
+        } else {
+            self.imageIV.transform = .identity
+            setupNameLabel()
+            self.zoomButton.setTitle("Zoom in Amiibo", for: .normal)
+            zoomActivated = false
+        }
     }
     
     func showDataInDetailVC(data: AmiiboForViewEntity) {
