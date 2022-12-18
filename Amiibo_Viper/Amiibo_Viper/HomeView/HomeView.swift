@@ -38,6 +38,7 @@ extension HomeView: HomeViewProtocol {
         tableView.delegate = self
         tableView.register(AmiiboCell.self, forCellReuseIdentifier: "cellId")
         setupTableView()
+        self.navigationItem.title = "Amiibo Viper"
     }
     
     func setupTableView() {

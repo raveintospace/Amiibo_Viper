@@ -79,7 +79,7 @@ extension DetailView: DetailViewProtocol {
     
     @objc func zoomAction() {
         if !self.zoomActivated {
-            self.imageIV.transform = CGAffineTransform(scaleX: 2.2, y: 2.2)
+            self.imageIV.transform = CGAffineTransform(scaleX: 1.9, y: 1.9)
             nameLabel.removeFromSuperview()
             self.zoomButton.setTitle("Zoom out Amiibo", for: .normal)
             zoomActivated = true
