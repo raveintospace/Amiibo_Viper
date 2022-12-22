@@ -14,7 +14,7 @@ class HomePresenter  {
     weak var view: HomeViewProtocol?
     var interactor: HomeInteractorInputProtocol?
     var wireFrame: HomeWireFrameProtocol?
-    
+    // array intermediate
 }
 
 extension HomePresenter: HomePresenterProtocol {
@@ -35,3 +35,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
         view?.presenterPushDataToView(receivedData: receivedData)
     }
 }
+
+// 3 model levels
+// remove unused files
+// class apiclient 
