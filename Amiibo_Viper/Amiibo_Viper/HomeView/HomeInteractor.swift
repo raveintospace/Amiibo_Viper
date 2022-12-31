@@ -18,7 +18,7 @@ class HomeInteractor: HomeInteractorInputProtocol {
     var arrayAmiibo = [AmiiboForViewEntity]()   // to store converted Amiibos
     
     func interactorGetData() {                  // ask remoteDataManager to get data from our api call
-        remoteDatamanager?.remoteGetData()
+        remoteDatamanager?.fetchAmiibos()
     }
 }
 

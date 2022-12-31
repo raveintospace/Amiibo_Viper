@@ -54,7 +54,7 @@ protocol HomeDataManagerInputProtocol: class {
 protocol HomeRemoteDataManagerInputProtocol: class {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol? { get set }
-    func remoteGetData()
+    func fetchAmiibos()
 }
 
 protocol HomeRemoteDataManagerOutputProtocol: class {

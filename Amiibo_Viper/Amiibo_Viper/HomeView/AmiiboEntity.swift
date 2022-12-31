@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct AmiiboEntity: Codable {
+struct AmiiboEntity: Decodable {
     let amiibo: [Amiibo]
 }
 
-struct Amiibo: Codable {
+struct Amiibo: Decodable {
     let amiiboSeries: String
     let character: String
     let gameSeries: String
@@ -23,7 +23,7 @@ struct Amiibo: Codable {
     let type: String
 }
 
-struct AmiiboRelease: Codable {
+struct AmiiboRelease: Decodable {
     let au: String?
     let eu: String?
     let jp: String?

@@ -37,5 +37,14 @@ extension HomePresenter: HomeInteractorOutputProtocol {
 }
 
 // 3 model levels
-// remove unused files
-// class apiclient 
+// remove unused files - uri
+// class apiClient -- done
+// separate view
+// review private properties
+// remove class unless weak var - uri
+
+//1. Indicar el tipo de acceso a las funciones/variables
+//2. Varias capas de modelado (data/domain/vista)
+//3. Separar los DataSources del la llamada (ApiClient) - done
+//4. No deja clases, modelos vacíos o protocolos que no se usan - uri
+// agregar a alan como colaborador

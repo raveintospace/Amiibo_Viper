@@ -15,7 +15,6 @@ class DetailView: UIViewController {
     var presenter: DetailPresenterProtocol?
     
     var safeArea: UILayoutGuide!
-    var imageIVTopAnchorConstant: NSLayoutConstraint!
     let imageIV = CustomImageView()
     let nameLabel = UILabel()
     let zoomButton = UIButton()
