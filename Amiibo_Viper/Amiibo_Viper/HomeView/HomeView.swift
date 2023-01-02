@@ -115,3 +115,5 @@ extension HomeView: UITableViewDelegate {
         presenter?.showDetailView(with: AmiiboForViewEntity(name: amiibo.name, gameSeries: amiibo.gameSeries, imageUrl: amiibo.imageUrl, count: amiibo.count))
     }
 }
+
+// new model - AmiiboForDetailViewEntity(name, imageUrl) - also change detailView, DetailPresenter, DetailProtocols & HomeWireFrame 
