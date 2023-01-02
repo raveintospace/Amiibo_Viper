@@ -14,9 +14,7 @@ class DetailWireFrame: DetailWireFrameProtocol {
     static func createDetailModule(with data: AmiiboForViewEntity) -> UIViewController {
         let view = DetailView()
         let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter()
-        let interactor: DetailInteractorInputProtocol & DetailRemoteDataManagerOutputProtocol = DetailInteractor()
-        let localDataManager: DetailLocalDataManagerInputProtocol = DetailLocalDataManager()
-        let remoteDataManager: DetailRemoteDataManagerInputProtocol = DetailRemoteDataManager()
+        let interactor: DetailInteractorInputProtocol = DetailInteractor()
         let wireFrame: DetailWireFrameProtocol = DetailWireFrame()
         
         view.presenter = presenter
@@ -25,9 +23,6 @@ class DetailWireFrame: DetailWireFrameProtocol {
         presenter.interactor = interactor
         presenter.dataAmiiboReceived = data // the data imported when creating the detailModule
         interactor.presenter = presenter
-        interactor.localDatamanager = localDataManager
-        interactor.remoteDatamanager = remoteDataManager
-        remoteDataManager.remoteRequestHandler = interactor
         
         return view
     }

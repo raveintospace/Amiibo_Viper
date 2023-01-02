@@ -36,7 +36,7 @@ struct APIClient {
                     return
                 }
 
-                  fatalError("Data and error should never both be nil")
+                  fatalError("Data and error should never be nil both")
                 }
             if let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 print("Getting from server: \(data)")

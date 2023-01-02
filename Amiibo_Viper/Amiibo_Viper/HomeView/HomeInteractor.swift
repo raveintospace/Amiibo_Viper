@@ -11,8 +11,7 @@ import Foundation
 class HomeInteractor: HomeInteractorInputProtocol {
 
     // MARK: - Properties
-    weak var presenter: HomeInteractorOutputProtocol?
-    var localDatamanager: HomeLocalDataManagerInputProtocol?
+    var presenter: HomeInteractorOutputProtocol?
     var remoteDatamanager: HomeRemoteDataManagerInputProtocol?
     
     var arrayAmiibo = [AmiiboForViewEntity]()   // to store converted Amiibos

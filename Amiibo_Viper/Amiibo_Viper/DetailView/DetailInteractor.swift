@@ -11,12 +11,6 @@ import Foundation
 class DetailInteractor: DetailInteractorInputProtocol {
 
     // MARK: Properties
-    weak var presenter: DetailInteractorOutputProtocol?
-    var localDatamanager: DetailLocalDataManagerInputProtocol?
-    var remoteDatamanager: DetailRemoteDataManagerInputProtocol?
-
+    var presenter: DetailInteractorOutputProtocol?
 }
 
-extension DetailInteractor: DetailRemoteDataManagerOutputProtocol {
-    // TODO: Implement use case methods
-}

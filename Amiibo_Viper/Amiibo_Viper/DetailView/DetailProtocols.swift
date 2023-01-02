@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-protocol DetailViewProtocol: class {
+protocol DetailViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
     func setupDetailView()
     func showDataInDetailVC(data: AmiiboForViewEntity)
 }
 
-protocol DetailWireFrameProtocol: class {
+protocol DetailWireFrameProtocol {
     // PRESENTER -> WIREFRAME
     static func createDetailModule(with data: AmiiboForViewEntity) -> UIViewController
 }
 
-protocol DetailPresenterProtocol: class {
+protocol DetailPresenterProtocol: AnyObject {
     // VIEW -> PRESENTER
     var view: DetailViewProtocol? { get set }
     var interactor: DetailInteractorInputProtocol? { get set }
@@ -31,30 +31,11 @@ protocol DetailPresenterProtocol: class {
     func viewDidLoad()
 }
 
-protocol DetailInteractorOutputProtocol: class {
+protocol DetailInteractorOutputProtocol {
 // INTERACTOR -> PRESENTER
 }
 
-protocol DetailInteractorInputProtocol: class {
+protocol DetailInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: DetailInteractorOutputProtocol? { get set }
-    var localDatamanager: DetailLocalDataManagerInputProtocol? { get set }
-    var remoteDatamanager: DetailRemoteDataManagerInputProtocol? { get set }
-}
-
-protocol DetailDataManagerInputProtocol: class {
-    // INTERACTOR -> DATAMANAGER
-}
-
-protocol DetailRemoteDataManagerInputProtocol: class {
-    // INTERACTOR -> REMOTEDATAMANAGER
-    var remoteRequestHandler: DetailRemoteDataManagerOutputProtocol? { get set }
-}
-
-protocol DetailRemoteDataManagerOutputProtocol: class {
-    // REMOTEDATAMANAGER -> INTERACTOR
-}
-
-protocol DetailLocalDataManagerInputProtocol: class {
-    // INTERACTOR -> LOCALDATAMANAGER
 }
