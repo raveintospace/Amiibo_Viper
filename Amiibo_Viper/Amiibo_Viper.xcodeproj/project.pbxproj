@@ -13,7 +13,6 @@
 		343FBC09294203F600490596 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343FBC08294203F600490596 /* CustomImageView.swift */; };
 		34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805425293FAF3D007CD70C /* AppDelegate.swift */; };
 		34805428293FAF3D007CD70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805427293FAF3D007CD70C /* SceneDelegate.swift */; };
-		3480542A293FAF3D007CD70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34805429293FAF3D007CD70C /* ViewController.swift */; };
 		3480542F293FAF3F007CD70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3480542E293FAF3F007CD70C /* Assets.xcassets */; };
 		34805432293FAF3F007CD70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34805430293FAF3F007CD70C /* LaunchScreen.storyboard */; };
 		34805441293FB026007CD70C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3480543A293FB026007CD70C /* HomePresenter.swift */; };
@@ -38,7 +37,6 @@
 		34805422293FAF3D007CD70C /* Amiibo_Viper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiibo_Viper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34805425293FAF3D007CD70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34805427293FAF3D007CD70C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		34805429293FAF3D007CD70C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3480542E293FAF3F007CD70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34805431293FAF3F007CD70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34805433293FAF3F007CD70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			children = (
 				34805425293FAF3D007CD70C /* AppDelegate.swift */,
 				34805427293FAF3D007CD70C /* SceneDelegate.swift */,
-				34805429293FAF3D007CD70C /* ViewController.swift */,
 				34AD01DC29479B70006FF96B /* DetailView */,
 				34805439293FAFF8007CD70C /* HomeView */,
 				3480542E293FAF3F007CD70C /* Assets.xcassets */,
@@ -207,7 +204,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				343FBC042941FE7E00490596 /* AmiiboForViewEntity.swift in Sources */,
-				3480542A293FAF3D007CD70C /* ViewController.swift in Sources */,
 				34805426293FAF3D007CD70C /* AppDelegate.swift in Sources */,
 				34AD01D829479B67006FF96B /* DetailInteractor.swift in Sources */,
 				343FBC09294203F600490596 /* CustomImageView.swift in Sources */,
