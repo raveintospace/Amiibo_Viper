@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailView: UIViewController {
+final class DetailView: UIViewController {
 
     // MARK: - Properties
     var presenter: DetailPresenterProtocol?
@@ -90,7 +90,7 @@ extension DetailView: DetailViewProtocol {
         }
     }
     
-    func showDataInDetailVC(data: AmiiboForViewEntity) {
+    func showDataInDetailVC(data: AmiiboForDetailViewEntity) {
         if let url = URL(string: data.imageUrl)
         {
             imageIV.loadImage(from: url)

@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class DetailWireFrame: DetailWireFrameProtocol {
+final class DetailWireFrame: DetailWireFrameProtocol {
     
-    static func createDetailModule(with data: AmiiboForViewEntity) -> UIViewController {
+    static func createDetailModule(with data: AmiiboForDetailViewEntity) -> UIViewController {
         let view = DetailView()
         let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter()
         let interactor: DetailInteractorInputProtocol = DetailInteractor()

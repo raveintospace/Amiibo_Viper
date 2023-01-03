@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeView: UIViewController {
+final class HomeView: UIViewController {
 
     // MARK: - Properties
     var presenter: HomePresenterProtocol?
@@ -112,7 +112,7 @@ extension HomeView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let amiibo = arrayViewAmiibo[indexPath.row]
-        presenter?.showDetailView(with: AmiiboForViewEntity(name: amiibo.name, gameSeries: amiibo.gameSeries, imageUrl: amiibo.imageUrl, count: amiibo.count))
+        presenter?.showDetailView(with: AmiiboForDetailViewEntity(name: amiibo.name, imageUrl: amiibo.imageUrl))
     }
 }
 

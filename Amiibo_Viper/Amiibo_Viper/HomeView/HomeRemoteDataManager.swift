@@ -52,7 +52,7 @@ struct APIClient {
     }
 }
 
-class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
+final class HomeRemoteDataManager:HomeRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: HomeRemoteDataManagerOutputProtocol?
         

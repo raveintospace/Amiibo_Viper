@@ -13,12 +13,12 @@ protocol DetailViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: DetailPresenterProtocol? { get set }
     func setupDetailView()
-    func showDataInDetailVC(data: AmiiboForViewEntity)
+    func showDataInDetailVC(data: AmiiboForDetailViewEntity)
 }
 
 protocol DetailWireFrameProtocol {
     // PRESENTER -> WIREFRAME
-    static func createDetailModule(with data: AmiiboForViewEntity) -> UIViewController
+    static func createDetailModule(with data: AmiiboForDetailViewEntity) -> UIViewController
 }
 
 protocol DetailPresenterProtocol: AnyObject {
@@ -26,7 +26,7 @@ protocol DetailPresenterProtocol: AnyObject {
     var view: DetailViewProtocol? { get set }
     var interactor: DetailInteractorInputProtocol? { get set }
     var wireFrame: DetailWireFrameProtocol? { get set }
-    var dataAmiiboReceived: AmiiboForViewEntity? { get set }
+    var dataAmiiboReceived: AmiiboForDetailViewEntity? { get set }
     
     func viewDidLoad()
 }

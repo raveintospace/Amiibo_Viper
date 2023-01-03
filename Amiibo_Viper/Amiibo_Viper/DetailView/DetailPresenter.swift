@@ -8,13 +8,13 @@
 
 import Foundation
 
-class DetailPresenter: DetailPresenterProtocol  {
+final class DetailPresenter: DetailPresenterProtocol  {
     
     // MARK: Properties
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
     var wireFrame: DetailWireFrameProtocol?
-    var dataAmiiboReceived: AmiiboForViewEntity?
+    var dataAmiiboReceived: AmiiboForDetailViewEntity?
     
     func viewDidLoad() {
         print("I'm the detail VC and I have: \(String(describing: dataAmiiboReceived?.name))")

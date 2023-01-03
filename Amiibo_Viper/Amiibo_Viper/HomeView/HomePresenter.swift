@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomePresenter  {
+final class HomePresenter  {
     
     // MARK: Properties
     weak var view: HomeViewProtocol?
@@ -24,7 +24,7 @@ extension HomePresenter: HomePresenterProtocol {
         view?.setup()
     }
     
-    func showDetailView(with data: AmiiboForViewEntity) {
+    func showDetailView(with data: AmiiboForDetailViewEntity) {
         wireFrame?.presentNewViewDetail(from: view!, withData: data)
     }
 }
@@ -46,5 +46,5 @@ extension HomePresenter: HomeInteractorOutputProtocol {
 //1. Indicar el tipo de acceso a las funciones/variables
 //2. Varias capas de modelado (data/domain/vista)
 //3. Separar los DataSources del la llamada (ApiClient) - done
-//4. No deja clases, modelos vacíos o protocolos que no se usan - uri
+//4. No deja clases, modelos vacíos o protocolos que no se usan - done
 // agregar a alan como colaborador

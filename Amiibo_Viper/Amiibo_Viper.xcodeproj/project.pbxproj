@@ -27,6 +27,7 @@
 		34AD01D829479B67006FF96B /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D129479B67006FF96B /* DetailInteractor.swift */; };
 		34AD01D929479B67006FF96B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D229479B67006FF96B /* DetailView.swift */; };
 		34AD01DB29479B67006FF96B /* DetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AD01D429479B67006FF96B /* DetailWireFrame.swift */; };
+		34D7DBC229649B3800C0533C /* AmiiboForDetailViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7DBC129649B3800C0533C /* AmiiboForDetailViewEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		34AD01D129479B67006FF96B /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		34AD01D229479B67006FF96B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		34AD01D429479B67006FF96B /* DetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireFrame.swift; sourceTree = "<group>"; };
+		34D7DBC129649B3800C0533C /* AmiiboForDetailViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboForDetailViewEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				34AD01D229479B67006FF96B /* DetailView.swift */,
 				34AD01D129479B67006FF96B /* DetailInteractor.swift */,
 				34AD01CE29479B67006FF96B /* DetailPresenter.swift */,
+				34D7DBC129649B3800C0533C /* AmiiboForDetailViewEntity.swift */,
 				34AD01D029479B67006FF96B /* DetailProtocols.swift */,
 				34AD01D429479B67006FF96B /* DetailWireFrame.swift */,
 			);
@@ -218,6 +221,7 @@
 				343FBC07294203BE00490596 /* AmiiboCell.swift in Sources */,
 				343FBC022941FE0800490596 /* AmiiboEntity.swift in Sources */,
 				34805441293FB026007CD70C /* HomePresenter.swift in Sources */,
+				34D7DBC229649B3800C0533C /* AmiiboForDetailViewEntity.swift in Sources */,
 				34AD01D929479B67006FF96B /* DetailView.swift in Sources */,
 				34805444293FB026007CD70C /* HomeInteractor.swift in Sources */,
 				34805447293FB026007CD70C /* HomeWireFrame.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeInteractor: HomeInteractorInputProtocol {
+final class HomeInteractor: HomeInteractorInputProtocol {
 
     // MARK: - Properties
     var presenter: HomeInteractorOutputProtocol?

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HomeWireFrame: HomeWireFrameProtocol {
+final class HomeWireFrame: HomeWireFrameProtocol {
 
     static func createHomeModule() -> UINavigationController {
         let view =  HomeView()
@@ -30,7 +30,7 @@ class HomeWireFrame: HomeWireFrameProtocol {
         return navigationController
     }
     
-    func presentNewViewDetail(from view: HomeViewProtocol, withData: AmiiboForViewEntity) {
+    func presentNewViewDetail(from view: HomeViewProtocol, withData: AmiiboForDetailViewEntity) {
         let newDetailView = DetailWireFrame.createDetailModule(with: withData)
         
         let viewController = view as! HomeView

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DetailInteractor: DetailInteractorInputProtocol {
+final class DetailInteractor: DetailInteractorInputProtocol {
 
     // MARK: Properties
     var presenter: DetailInteractorOutputProtocol?
