@@ -44,7 +44,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
 // remove class unless weak var - uri
 
 //1. Indicar el tipo de acceso a las funciones/variables
-//2. Varias capas de modelado (data/domain/vista)
+//2. Varias capas de modelado (data/domain/vista) - Done
 //3. Separar los DataSources del la llamada (ApiClient) - done
 //4. No deja clases, modelos vacíos o protocolos que no se usan - done
 // agregar a alan como colaborador
